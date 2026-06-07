@@ -1,0 +1,34 @@
+import java.util.Scanner;
+class Area {
+    
+    void circle(double r) {
+        double area = 3.14 * r * r;
+        System.out.println("Area of circle: " + area);
+    }
+    void rectangle(double length, double width) {
+        double area = length * width;
+        System.out.println("Area of rectangle: " + area);
+    }
+    void triangle(double base, double height) {
+        double area = 0.5 * base * height;
+        System.out.println("Area of triangle: " + area);
+    }
+}
+public class Areashapes {
+    public static void main(String[] args) {
+        Area a = new Area();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the radius of the circle:");
+        double radius = sc.nextDouble();
+        a.circle(radius);
+        System.out.println("Enter the length and width of the rectangle:");
+        double length = sc.nextDouble();
+        double width = sc.nextDouble();
+        a.rectangle(length, width);
+        System.out.println("Enter the base and height of the triangle:");
+        double base = sc.nextDouble();
+        double height = sc.nextDouble();
+        a.triangle(base, height);
+        sc.close();
+    }
+}
